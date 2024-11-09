@@ -1,0 +1,52 @@
+body {
+    background-color: #652828;
+}
+
+/* Défilement horizontal des donateurs */
+#donator-list {
+    display: flex;
+    overflow: hidden; /* Cache les éléments qui dépassent */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    max-width: 100%;
+    padding: 15px 10px;
+    font-size: 20px;
+    position: relative;
+    background-color: hsla(0, 0%, 100%, .7);
+    border-radius: 15px;
+}
+
+#donator-wrapper {
+    padding-left: 100%;
+    animation: scrollDonators 10s linear infinite; /* Animation pour défiler en continu */
+    display: flex;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-family: "Raleway", sans-serif;
+}
+  
+.donator-item {
+    margin-right: 10px; /* Espacement entre les éléments */
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    gap: 5px;
+}
+
+.donator-amount {
+    color: rgb(214, 71, 88);
+    font-weight: 700;
+}
+
+.donator-separator {
+    padding-left: 5px;
+}
+
+@keyframes scrollDonators {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Défilement complet à gauche */
+    }
+}
+  
