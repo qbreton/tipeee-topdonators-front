@@ -2,7 +2,7 @@ const donatorWrapper = document.getElementById("donator-wrapper");
 const maxDonators = 10;
 export let topDonators = [];
 
-const wssUrl = "ws://66.241.125.114:8080"
+const wssUrl = "wss://tipeee-api.fly.io:8080"
 const socket = io(wssUrl);
 
 socket.on('connect', () => {
